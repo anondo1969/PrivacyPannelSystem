@@ -1,0 +1,264 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:2:1-107:12
+	package
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:6:5-78
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_MOCK_LOCATION
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ALLOW_MOCK_LOCATION
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:8:5-78
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:8:22-75
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:9:5-72
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:9:22-70
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:10:22-77
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:12:5-78
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:12:22-75
+application
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:15:5-105:19
+MERGED from [com.android.support:appcompat-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:19:9-41
+	android:supportsRtl
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:20:9-35
+	android:allowBackup
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:18:9-43
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:21:9-40
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:16:9-35
+activity#app.android.tanzi.com.privacypannel3.MainActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:22:9-31:20
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:24:13-45
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:25:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:23:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:26:13-30:29
+action#android.intent.action.MAIN
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:27:17-69
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:29:27-74
+receiver#app.android.tanzi.com.privacypannel3.AppDeleteReceiver
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:33:9-38:20
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:33:19-52
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:34:13-37:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:35:17-80
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:35:25-77
+data
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:36:17-50
+	android:scheme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:36:23-47
+receiver#app.android.tanzi.com.privacypannel3.AppInstallReceiver
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:40:9-45:20
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:40:19-53
+intent-filter#android.intent.action.PACKAGE_ADDED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:41:13-44:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:42:17-78
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:42:25-75
+receiver#app.android.tanzi.com.privacypannel3.FakeGPSOnSignalServiceReceiver
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:47:9-48:20
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:47:19-65
+receiver#app.android.tanzi.com.privacypannel3.LocationPermissionWarningServiceReceiver
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:50:9-51:20
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:50:19-75
+receiver#app.android.tanzi.com.privacypannel3.ApplicationRestartSignalReceiver
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:53:9-59:20
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:53:19-67
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON+android.intent.category.DEFAULT
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:54:13-58:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:55:17-79
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:55:25-76
+category#android.intent.category.DEFAULT
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:56:17-76
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:56:27-73
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:57:17-81
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:57:25-79
+service#app.android.tanzi.com.privacypannel3.FakeGPSOnService
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:61:9-77
+	android:enabled
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:61:18-40
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:61:41-73
+service#app.android.tanzi.com.privacypannel3.ApplicationRestartService
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:63:9-86
+	android:enabled
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:63:18-40
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:63:41-82
+activity#app.android.tanzi.com.privacypannel3.TransparencyControlActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:65:9-68:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:67:13-72
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:68:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:66:13-56
+activity#app.android.tanzi.com.privacypannel3.ApplicationListActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:69:9-72:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:71:13-68
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:72:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:70:13-52
+meta-data#com.google.android.gms.version
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:77:9-79:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:79:13-66
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:78:13-58
+activity#app.android.tanzi.com.privacypannel3.ApplicationDetailsActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:81:9-84:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:83:13-71
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:84:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:82:13-55
+activity#app.android.tanzi.com.privacypannel3.ApplicationPermissionActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:85:9-88:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:87:13-74
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:88:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:86:13-58
+activity#app.android.tanzi.com.privacypannel3.PermissionSpecificApplicationActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:89:9-92:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:91:13-83
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:92:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:90:13-66
+activity#app.android.tanzi.com.privacypannel3.UserProfileViewActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:93:9-96:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:95:13-69
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:96:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:94:13-52
+activity#app.android.tanzi.com.privacypannel3.LocationAccuracyViewActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:97:9-100:59
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:99:13-74
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:100:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:98:13-57
+activity#app.android.tanzi.com.privacypannel3.LocationUsedAppsSelectionActivity
+ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:101:9-104:68
+	android:label
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:103:13-80
+	android:theme
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:104:13-56
+	android:name
+		ADDED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml:102:13-62
+uses-sdk
+INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [eu.chainfire:libsuperuser:1.0.0.201602271131] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\eu.chainfire\libsuperuser\1.0.0.201602271131\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.2.0] D:\workspace2016\PrivacyPannel3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace2016\PrivacyPannel3\app\src\main\AndroidManifest.xml
