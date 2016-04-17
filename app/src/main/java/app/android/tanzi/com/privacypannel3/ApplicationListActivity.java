@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
 
+import java.util.Arrays;
+
 
 public class ApplicationListActivity extends AppCompatActivity {
 
@@ -28,6 +30,8 @@ public class ApplicationListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_application_list);
 
         String[] application_list = data_source.loadApplicationName();
+
+        Arrays.sort(application_list);
 
 
         final ApplicationListAdapter applicationListAdapter = new ApplicationListAdapter(this, application_list);

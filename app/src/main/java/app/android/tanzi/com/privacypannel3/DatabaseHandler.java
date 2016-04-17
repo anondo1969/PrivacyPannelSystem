@@ -126,6 +126,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (cursor.getCount()==0){
 
             ApplicationInfoController applicationInfo = new ApplicationInfoController();
+            cursor.close();
             return applicationInfo;
         }
 
@@ -139,6 +140,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ApplicationInfoController applicationInfo = new ApplicationInfoController(Integer.parseInt(cursor.getString(0)), Integer.parseInt(cursor.getString(1)),
                 cursor.getString(2), cursor.getString(3), cursor.getString(4));
         // return contact
+        cursor.close();
         return applicationInfo;
 
     }

@@ -11,7 +11,7 @@ public class ApplicationDetailsActivity extends AppCompatActivity {
 
     ApplicationViewController data_source = new ApplicationViewController(this);
 
-    String[] dummy= {"this", "is", "dummy"};
+    String[] dummy= {"this", "is", "specialPermissionNames"};
 
 
 

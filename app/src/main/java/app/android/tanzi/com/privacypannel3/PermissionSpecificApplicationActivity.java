@@ -13,7 +13,7 @@ public class PermissionSpecificApplicationActivity extends AppCompatActivity {
 
     ApplicationViewController data_source = new ApplicationViewController(this);
 
-    String[] dummy= {"this", "is", "dummy"};
+    String[] dummy= {"this", "is", "specialPermissionNames"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

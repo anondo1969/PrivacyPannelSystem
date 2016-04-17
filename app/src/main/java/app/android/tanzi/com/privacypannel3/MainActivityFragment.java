@@ -18,18 +18,19 @@ public class MainActivityFragment extends Fragment {
     /***If you change this String then please modify code on onItemClick***/
     String[] privacyPanel = {
             "Location Accuracy",
-            "User Profile",
-            "Transparency Control",
+            "Sensitive Data",
+            "Manage Alert",
+            "Transparency",
             "Guided Tour",
             "About"
     };
 
     Integer[] privacyPanelIcon = {R.drawable.location,
+            R.drawable.classify_icon,
             R.drawable.user_profile,
             R.drawable.transparenty,
             R.drawable.guided_tr,
             R.drawable.info};
-
     public MainActivityFragment() {
     }
 
@@ -53,16 +54,16 @@ public class MainActivityFragment extends Fragment {
                 String str = (String) item;
                 String alter = str + " is not Implemented yet!";
 
-                if (str == "Transparency Control") {
+                if (str == "Transparency") {
                     Intent intent = new Intent(getActivity(), TransparencyControlActivity.class);
                     //based on item add info to intent
                     startActivity(intent);
-                } else if (str == "User Profile") {
+                } else if (str == "Manage Alert") {
                     Intent intent = new Intent(getActivity(), UserProfileViewActivity.class);
                     //based on item add info to intent
                     startActivity(intent);
                 } else if (str == "Location Accuracy") {
-                    Intent intent = new Intent(getActivity(), LocationAccuracyViewActivity.class);
+                    Intent intent = new Intent(getActivity(), LocationAccuracyActivity.class);
                     //based on item add info to intent
                     startActivity(intent);
                 } else {

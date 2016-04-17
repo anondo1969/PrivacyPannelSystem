@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -14,8 +15,6 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -29,17 +28,19 @@ import java.util.List;
  */
 public class FakeGPSOnService extends Service implements LocationListener {
 
-//    public static final String LOG_TAG = "MockGpsProviderActivity";
+    //    public static final String LOG_TAG = "MockGpsProviderActivity";
     private static final String MOCK_GPS_PROVIDER_INDEX = "GpsMockProviderIndex";
 
     private MockGpsProvider mMockGpsProviderTask = null;
     private Integer mMockGpsProviderIndex = 0;
 
-//    private static final String TAG = "BOOMBOOMTESTGPS";
+    //    private static final String TAG = "BOOMBOOMTESTGPS";
     private LocationManager mLocationManager = null;
     private static final int LOCATION_INTERVAL = 1000;
     private static final float LOCATION_DISTANCE = 10f;
     String beforeEnable = null;
+
+    SharedPreferences fakeLocationData;
 
 
     @Override
@@ -62,7 +63,8 @@ public class FakeGPSOnService extends Service implements LocationListener {
         }
         //-------------------------------------------
 
-        return START_STICKY;
+        //return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     @Override
@@ -72,6 +74,7 @@ public class FakeGPSOnService extends Service implements LocationListener {
 
         try {
             startFakeGPS();
+
         }
         catch (Exception e) {
 
@@ -131,7 +134,7 @@ public class FakeGPSOnService extends Service implements LocationListener {
 
     /** Define a mock GPS provider as an asynchronous task of this Activity. */
     private class MockGpsProvider extends AsyncTask<String, Integer, Void> {
-//        public static final String LOG_TAG = "GpsMockProvider";
+        //        public static final String LOG_TAG = "GpsMockProvider";
         public static final String GPS_MOCK_PROVIDER = "GpsMockProvider";
 
         /** Keeps track of the currently processed coordinate. */
@@ -139,6 +142,8 @@ public class FakeGPSOnService extends Service implements LocationListener {
 
         @Override
         protected Void doInBackground(String... data) {
+
+            fakeLocationData = getSharedPreferences("USER_PROFILE_PREFS_NAME", MODE_PRIVATE);
 //            Log.d(LOG_TAG, "Inside data");
             // process data
             for (String str : data) {
@@ -157,9 +162,15 @@ public class FakeGPSOnService extends Service implements LocationListener {
                 Double altitude= null;
                 try {
                     String[] parts = str.split(",");
-                    latitude = Double.valueOf(parts[0]);
-                    longitude = Double.valueOf(parts[1]);
+                    //latitude = Double.valueOf(parts[0]);
+                    //longitude = Double.valueOf(parts[1]);
                     altitude = Double.valueOf(parts[2]);
+
+                    longitude = (double) fakeLocationData.getFloat("fakeLongitude:", (float) 88.60114);//
+                    latitude = (double) fakeLocationData.getFloat("fakeLatitude:", (float) 24.374); //
+
+                    //longitude = 88.60114;//
+                    //latitude = 24.374; //
                 }
                 catch(NullPointerException e) { break; }        // no data available
                 catch(Exception e) { continue; }                // empty or invalid line
@@ -234,6 +245,19 @@ public class FakeGPSOnService extends Service implements LocationListener {
         //Check whether mock gps on or off, if off then ask user to on it
         //---------------------------------------------------------------
 
+        if(!checkMockLocationEnabled()){
+
+            /*
+            Intent II = new Intent(android.provider.Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS);
+            II.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(II);
+
+            Toast.makeText(getApplicationContext(), "Please Enable Allow mock locations", Toast.LENGTH_LONG).show();
+            */
+//            Log.d("Inside startFakeGPS", "Value: ----------------------------");
+            // normalAppMockEnableRequest();
+
+        }
 
         //---------------------------------------------------------------
 
@@ -289,9 +313,6 @@ public class FakeGPSOnService extends Service implements LocationListener {
                 locationManager.addTestProvider(MockGpsProvider.GPS_MOCK_PROVIDER, false, false,
                         false, false, true, false, false, 0, 5);
                 locationManager.setTestProviderEnabled(MockGpsProvider.GPS_MOCK_PROVIDER, true);
-
-                //test purpose
-                //locationManager.requestLocationUpdates(MockGpsProvider.GPS_MOCK_PROVIDER, 0, 0, this);
 //                Log.d(LOG_TAG, "Outside Call1");
 
             } catch(Exception e) {

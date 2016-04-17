@@ -1,19 +1,31 @@
 <resources>
     <string name="app_name">Privacy Panel</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_transperancy_control">Transparency Control</string>
+    <string name="title_activity_transperancy_control">Transparency</string>
     <string name="title_activity_application_list">Application List</string>
     <string name="title_activity_application_details">Application Details</string>
     <string name="title_activity_application_permission">Application Permissions</string>
     <string name="title_activity_permission_specific_application">Permission Specific Application\'s
         Name
     </string>
-    <string name="location_for_application_select_text">Please select the application names for setting fake locations.</string>>
-    <string name="title_activity_user_profile">User Profile</string>
+    <string name="location_accuracy_switch">Fake Location</string>>
+    <string name="risky_app_btn">View Risky Apps</string>>
+    <string name="location_for_application_select_text">Apps that Access Your Location</string>
+    >
+    <string name="title_activity_user_profile">Manage Alert</string>
     <string name="cancel">Cancel</string>
     <string name="done">Done</string>
-    <string name="title_activity_user_profile_view">User Profile</string>
+    <string name="title_activity_user_profile_view">Manage Alert</string>
     <string name="title_activity_location_accuracy_view">Location Security</string>
     <string name="title_activity_location_used_apps_selection">LocationUsedAppsSelectionActivity
     </string>
+    <string name="seekbar_text">Select the value(km)</string>>
+    <string name="title_activity_location_accuracy">Location Accuracy</string>
+    <string name="title_activity_application_selected_permission">
+        Application Permissions
+    </string>
+    <string name="other_permission_btn">View All Permissions</string>
+    <string name="title_activity_special_permission_application_names">
+        Application Names
+    </string>>
 </resources>

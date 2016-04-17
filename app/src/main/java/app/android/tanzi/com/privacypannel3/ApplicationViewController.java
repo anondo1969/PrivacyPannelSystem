@@ -17,6 +17,108 @@ import java.util.Set;
  */
 public class ApplicationViewController extends ContextWrapper{
 
+    String[] specialPermissionNames = {
+
+            "Geolocation",
+            "Files or Memory Storage",
+            "Call",
+            "Contacts",
+            "Messages",
+            "Image",
+            "Audio",
+            "Calender",
+            "Camera"
+    };
+
+    String[][] allPermissions ={
+
+            {
+                    //1. Geolocation
+                    "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+
+            },
+
+            {
+                    //2. Files / memory storage
+                    "android.permission.MOUNT_UNMOUNT_FILESYSTEMS",
+                    "android.permission.WRITE_EXTERNAL_STORAGE",
+                    "android.permission.WRITE_SOCIAL_STREAM",
+                    "android.permission.WRITE_SETTINGS",
+                    "android.permission.WRITE_MEDIA_STORAGE",
+                    "android.permission.WRITE_SYNC_SETTINGS",
+                    "android.permission.READ_LOGS",
+                    "android.permission.READ_INTERNAL_STORAGE",
+                    "android.permission.READ_EXTERNAL_STORAGE",
+                    "android.permission.READ_SOCIAL_STREAM",
+                    "android.permission.READ_USER_DICTIONARY",
+                    "android.permission.READ_SYNC_SETTINGS",
+                    "android.permission.ACCESS_SUPERUSER"
+
+            },
+
+            {
+                    //3. call
+                    "permission.VOIP_CALL",
+                    "android.permission.WRITE_CALL_LOG",
+                    "android.permission.READ_CALL_LOG",
+                    "android.permission.CALL_PHONE",
+                    "android.permission.PROCESS_OUTGOING_CALLS"
+
+            },
+
+            {
+                    //4. Contacts
+                    "android.permission.WRITE_CONTACTS",
+                    "android.permission.READ_CONTACTS",
+                    "android.permission.READ_PROFILE",
+                    "android.permission.READ_CALL_LOG",
+                    "android.permission.READ_CONTACTS"
+
+            },
+
+            {
+                    //5. messages
+                    "permission.C2D_MESSAGE",
+                    "permission.RECEIVE_ADM_MESSAGE",
+                    "android.permission.SEND_SMS",
+                    "android.permission.WRITE_SMS",
+                    "android.permission.READ_SMS",
+                    "android.permission.SMS_ALL",
+                    "android.permission.RECEIVE_SMS",
+                    "android.permission.RECEIVE_MMS"
+
+            },
+
+            {
+                    //6. Image
+                    "permission.WRITE_IMAGES"
+
+            },
+
+            {
+                    //7. Aaudio
+                    "android.permission.RECORD_AUDIO"
+
+            },
+
+            {
+                    //8. Calendar
+                    "android.permission.WRITE_CALENDAR",
+                    "android.permission.READ_CALENDAR"
+
+            },
+
+            {
+                    //9. Camera
+                    "android.permission.CAMERA"
+
+            },
+
+
+    };
+
    Context context; //1
 
     DatabaseHandler db ;//2
@@ -190,6 +292,7 @@ public class ApplicationViewController extends ContextWrapper{
     }
 
     //---------------------------------------------------------------------------------------------------------------
+    //**
     //load all the applications name which uses location permission
     public String[] retrieveLocationPermissionUsedAppsInformation(){
 
@@ -295,9 +398,9 @@ public class ApplicationViewController extends ContextWrapper{
         String[] permissionsArray = new String[uniquePermissions.size()];
         uniquePermissions.toArray(permissionsArray);
 
-//        for (String app : permissionsArray) {
-//            Log.d("xxx: ", app.toString());
-//        }
+ //       for (String app : permissionsArray) {
+     //       Log.d("values", app.toString());
+     //   }
         db.close();
         return permissionsArray;
 
@@ -359,7 +462,7 @@ public class ApplicationViewController extends ContextWrapper{
 
 //            Log.d("PermissionCheckChange", Integer.toString(success));
             //just to check
-            testRetrievingSingleApplication(a.toString());
+          //  testRetrievingSingleApplication(a.toString());
         }
 
         db.close();
@@ -414,5 +517,190 @@ public class ApplicationViewController extends ContextWrapper{
         db.close();
 
         return packageSpecificPermissionInfo;
+    }
+
+    //load all the permissions which matches a particular permission
+    //---------------------------------------------------------------------------------------------------------
+    public String[] loadSpecialPermissionNames(){
+
+
+        //we need all the data from permission table
+        List<PermissionInfoController> permissionInfo = db.getAllPermissionInfo();
+
+        List<String> finalSpecialPermissionNames = new ArrayList<String>();
+
+        boolean match = false;
+
+
+        for (int i = 0; i < allPermissions.length; i++) {
+            for (int j = 0; j < allPermissions[i].length; j++) {
+                match = permissionMatches(allPermissions[i][j]) ;
+                if(match){
+
+                    finalSpecialPermissionNames.add(specialPermissionNames[i]);
+                    break;
+                }
+            }
+        }
+
+        String[] permissionNamesArray = new String[finalSpecialPermissionNames.size()];
+        finalSpecialPermissionNames.toArray(permissionNamesArray);
+
+//        for (String app : appNamesArray) {
+//            Log.d("boomboomboom: ", app.toString());
+//        }
+        return permissionNamesArray;
+    }
+    //----------------------------------------------------------------------------------------------------
+
+    public boolean permissionMatches(String permissionName) {
+
+        boolean match = false;
+        List<PermissionInfoController> permissionInfo = db.getAllPermissionInfo();
+        for (PermissionInfoController app : permissionInfo) {
+            if (app.getPermissions().contains(permissionName)) {//substring match
+
+                match = true;
+                break;
+            }
+        }
+        db.close();
+        return match;
+    }
+
+    public void changeSpecialPermissionCheckValues(String [] givenSpecialPermissionNames, Boolean [] check ){
+
+        int rowNumber = 0;
+        int id = 0;
+
+        List<PermissionInfoController> permissionInfo = db.getAllPermissionInfo();
+
+        for(int i = 0; i<check.length; i++){
+
+
+                for(int j=0; j<specialPermissionNames.length; j++){
+                    if(givenSpecialPermissionNames[i].equals(specialPermissionNames[j])){
+                        rowNumber = j;
+                        break;
+                    }
+                }
+
+                for(int k=0; k<allPermissions[rowNumber].length; k++){
+
+                    for (PermissionInfoController app : permissionInfo) {
+                        if (app.getPermissions().contains(allPermissions[rowNumber][k])) {//substring match
+
+                            id = app.getUID();
+
+                            ApplicationInfoController checkedApp = db.getApplicationInfo(id);
+
+                            //Log.d("Appsxx", checkedApp.getAppName());
+
+                            ApplicationInfoController selectedApplication = new ApplicationInfoController();
+                            selectedApplication.setId(checkedApp.getId());
+                            selectedApplication.setUID(checkedApp.getUID());
+                            selectedApplication.setAppName(checkedApp.getAppName());
+                            selectedApplication.setPackageName(checkedApp.getPackageName());
+
+                            if(check[i]) {
+                                selectedApplication.setPermission_checked("1");
+                                /*
+                                if(specialPermissionNames[rowNumber].equals("Geolocation")){
+
+                                    String[] application_list =
+                                            retrieveSpecialPermissionUsedAppsInformation("Geolocation");
+                                    Boolean[] AppNamesArray = new Boolean[application_list.length];
+                                    for (int arrayIndex =0; arrayIndex<application_list.length;arrayIndex++ ){
+                                        AppNamesArray[arrayIndex] = true;
+                                    }
+                                    changeLocationCheckValues(application_list, AppNamesArray);
+                                }
+                                */
+
+                            }
+                            else{
+                                selectedApplication.setPermission_checked("0");
+                                 /*
+                                if(specialPermissionNames[rowNumber].equals("Geolocation")){
+
+                                    String[] application_list =
+                                            retrieveSpecialPermissionUsedAppsInformation("Geolocation");
+                                    Boolean[] AppNamesArray = new Boolean[application_list.length];
+                                    for (int arrayIndex =0; arrayIndex<application_list.length;arrayIndex++ ){
+                                        AppNamesArray[arrayIndex] = false;
+                                    }
+                                    changeLocationCheckValues(application_list, AppNamesArray);
+                                }
+                                */
+                            }
+
+                            //ApplicationInfoController aa = db.getApplicationInfo(id);
+
+                            int success = db.updateApplicationInfo(selectedApplication);
+
+                            //Log.d("Appsxx", aa.getAppName()+" "+aa.getPermissionChecked());
+                            //break;
+                        }
+                    }
+
+
+
+                }
+
+        }
+
+        db.close();
+
+    }
+
+    public String [] retrieveSpecialPermissionUsedAppsInformation(String permissionName){
+
+        int rowNumber = 0;
+
+        int id = 0;
+
+
+        List<PermissionInfoController> permissionInfo = db.getAllPermissionInfo();
+        List<String> appNames = new ArrayList<String>();
+
+        for(int i=0; i<specialPermissionNames.length; i++){
+            if(permissionName.equals(specialPermissionNames[i])){
+                rowNumber = i;
+                break;
+            }
+        }
+
+        for(int k=0; k<allPermissions[rowNumber].length; k++) {
+
+            for (PermissionInfoController app : permissionInfo) {
+                if (app.getPermissions().contains(allPermissions[rowNumber][k])) {//substring match
+
+                    id = app.getUID();
+                    ApplicationInfoController checkedApp = db.getApplicationInfo(id);
+                    appNames.add(checkedApp.getAppName());
+                    //break;
+                }
+            }
+            //String Appname = getAppName(id);
+            //ApplicationInfoController checkedApp = db.getApplicationInfo(id);
+            //appNames.add(checkedApp.getAppName());
+        }
+
+        Set<String> uniqueAppNames = new HashSet<String>(appNames);
+
+        String[] AppNamesArray = new String[uniqueAppNames.size()];
+        uniqueAppNames.toArray(AppNamesArray);
+
+        db.close();
+
+        return AppNamesArray;
+
+    }
+
+    public String getAppName(int id){
+
+        ApplicationInfoController checkedApp = db.getApplicationInfo(id);
+        db.close();
+        return checkedApp.getAppName();
     }
 }

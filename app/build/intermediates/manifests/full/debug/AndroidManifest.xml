@@ -49,10 +49,8 @@
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <receiver android:name="app.android.tanzi.com.privacypannel3.FakeGPSOnSignalServiceReceiver" >
-        </receiver>
-        <receiver android:name="app.android.tanzi.com.privacypannel3.LocationPermissionWarningServiceReceiver" >
-        </receiver>
+        <receiver android:name="app.android.tanzi.com.privacypannel3.FakeGPSOnSignalServiceReceiver" />
+        <receiver android:name="app.android.tanzi.com.privacypannel3.PermissionWarningServiceReceiver" />
         <receiver android:name="app.android.tanzi.com.privacypannel3.ApplicationRestartSignalReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -91,7 +89,7 @@
             android:label="@string/title_activity_application_details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.android.tanzi.com.privacypannel3.ApplicationPermissionActivity"
+            android:name="app.android.tanzi.com.privacypannel3.ApplicationAllPermissionActivity"
             android:label="@string/title_activity_application_permission"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -103,12 +101,24 @@
             android:label="@string/title_activity_user_profile_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="app.android.tanzi.com.privacypannel3.LocationAccuracyViewActivity"
+            android:name="app.android.tanzi.com.privacypannel3.RiskyAppsViewActivity"
             android:label="@string/title_activity_location_accuracy_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="app.android.tanzi.com.privacypannel3.LocationUsedAppsSelectionActivity"
             android:label="@string/title_activity_location_used_apps_selection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="app.android.tanzi.com.privacypannel3.LocationAccuracyActivity"
+            android:label="@string/title_activity_location_accuracy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="app.android.tanzi.com.privacypannel3.ApplicationSelectedPermissionActivity"
+            android:label="@string/title_activity_application_selected_permission"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="app.android.tanzi.com.privacypannel3.SpecialPermissionApplicationNamesActivity"
+            android:label="@string/title_activity_special_permission_application_names"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

@@ -11,9 +11,9 @@ import android.widget.RadioButton;
 public class UserProfileViewActivity extends AppCompatActivity {
 
     String[] user_profile = {
-            "Basic User",
-            "Modarate User",
-            "Restricted User"
+            "None",
+            "Caution Alert",
+            "Block All"
     };
     SharedPreferences.Editor user_profile_editor;
 

@@ -45,6 +45,57 @@ public class MainActivity extends AppCompatActivity {
         int id = get_user_profile.getInt("Radio Button Id:", 0); //0 is the default value.
 
         ProfileSettings profileSettings = new ProfileSettings();
+        /*/-----------------------------------
+
+        SharedPreferences.Editor user_profile_editor;
+        LocationManager locationManager;
+        Location getLastLocation;
+        double realLongitude;
+        double realLatitude;
+        int distance = 500; //will be taken from user
+        int bearing = 1 + (int)(Math.random() * ((360 - 1) + 1));
+
+        locationManager = (LocationManager) getSystemService(AppContext.getContext().LOCATION_SERVICE);
+
+        //gps on koraye nilei hobe
+
+        if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+
+            getLastLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+            if (getLastLocation != null) {//
+                realLongitude = getLastLocation.getLongitude();
+                realLatitude = getLastLocation.getLatitude();
+            } else {
+
+                //SharedPreferences fakeLocationData = getSharedPreferences("USER_PROFILE_PREFS_NAME", MODE_PRIVATE); // get
+
+                realLongitude = fakeLocationData.getFloat("Longitude:", (float) 88.60114);//
+                realLatitude = fakeLocationData.getFloat("Latitude:", (float) 24.374); //
+            }
+
+            user_profile_editor = getSharedPreferences("USER_PROFILE_PREFS_NAME", MODE_PRIVATE).edit(); // set
+
+            user_profile_editor.putFloat("Latitude:", (float) realLatitude);
+            user_profile_editor.putFloat("Longitude:", (float) realLongitude);
+            user_profile_editor.putFloat("Bearing:", bearing);
+            user_profile_editor.putInt("Distance:", distance);
+            //save the co ordinates maybe.
+            user_profile_editor.commit();
+        }
+        else{
+
+            //show a alert dialog to tell user to on GPS
+            AlertDialog.Builder builder = new AlertDialog.Builder(AppContext.getContext());
+            builder.setMessage("Please Enable your GPS location first to enable this feature. You can disable your GPS location later")
+                    .setCancelable(false)
+                    .setTitle("\"Your GPS Location\" is Disabled!!")
+                    .setPositiveButton("OK", null);
+            AlertDialog alert = builder.create();
+            alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+            alert.show();
+        }
+
+        //-----------------------------------*/
         profileSettings.setProfile(id);
     }
 

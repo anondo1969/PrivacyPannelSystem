@@ -117,7 +117,7 @@ public class FakeGPSOnSignalServiceReceiver extends BroadcastReceiver {
                     }
                 }
                 //  Toast.makeText(AppContext.getContext(), "Active Apps: " + sb.toString(), Toast.LENGTH_LONG).show();
-//                Log.d("GPSProtectionEnable: ", Boolean.toString(GPSProtectionEnable));
+//                Log.d("ProtectionEnable: ", Boolean.toString(ProtectionEnable));
 
                 Intent service = new Intent(AppContext.getContext(), FakeGPSOnService.class);
 

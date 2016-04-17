@@ -64,8 +64,12 @@ public class UserProfileViewAdapter extends ArrayAdapter{
                     /***************shared Preference value storing******************/
                     /**********Code Here Profile Settings**********/
                     user_profile_editor.putString("Profile Name:",str);
-                    user_profile_editor.putInt("Radio Button Id:",position);
+                    user_profile_editor.putInt("Radio Button Id:", position);
+                    user_profile_editor.putBoolean("setLocation:", false);
+                    //save the co ordinates maybe.
                     user_profile_editor.commit();
+
+                    SharedPreferences.Editor fakeLocationDataEditor;
 
                 }
             }

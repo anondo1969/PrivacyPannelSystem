@@ -39,7 +39,7 @@ public class TransparencyControlActivity extends AppCompatActivity {
                     //based on item add info to intent
                     startActivity(intent);
                 }else if(str == "Permissions"){
-                    Intent intent = new Intent(getApplicationContext(), ApplicationPermissionActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ApplicationSelectedPermissionActivity.class);
                     //based on item add info to intent
                     startActivity(intent);
                 }
